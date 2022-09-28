@@ -196,3 +196,8 @@ function renderCities() {
     var thisCity = $(this).attr("data-city");
     getResponseWeather(thisCity);
   });
+
+
+
+
+
