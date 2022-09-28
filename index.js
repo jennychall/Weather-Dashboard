@@ -43,7 +43,7 @@ function storeCities(){
 function renderCities() {
       cityList.empty();
     
-    // Render a new li for each city
+    // Render a new list for each city
     for (var i = 0; i < cities.length; i++) {
       var city = cities[i];
       
@@ -54,7 +54,7 @@ function renderCities() {
       console.log(li);
       cityList.prepend(li);
     }
-    //Get Response weather for the first city only
+    //Get Response weather for just the first city 
     if (!city){
         return
     } 
@@ -76,12 +76,12 @@ function renderCities() {
     }
     //Adding city-input to the city array
     cities.push(city);
-    // Store updated cities in localStorage, re-render the list
+    // Store updated cities in localStorage, re-render the list  
   storeCities();
   renderCities();
   });
 
-  //Function get Response Weather 
+  //Function to get Response Weather! 
   
   function getResponseWeather(cityName){
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" +cityName+ "&appid=" + key; 
@@ -191,7 +191,7 @@ function renderCities() {
     
   }
 
-  //Click function 
+ //Click function 
   $(document).on("click", "#listC", function() {
     var thisCity = $(this).attr("data-city");
     getResponseWeather(thisCity);
